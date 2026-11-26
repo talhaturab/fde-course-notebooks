@@ -6,12 +6,16 @@ The Google Colab notebooks for the free course *Forward Deployed AI/ML Engineer*
 | --- | --- | --- |
 | Week 3, Day 2 | [`notebooks/week-3/day-2-catboost.ipynb`](notebooks/week-3/day-2-catboost.ipynb) | Fits CatBoost on the logistics client's late deliveries, with category columns as plain text, and puts it on the day's scorecard. About 25 minutes. |
 | Week 3, Day 4 | [`notebooks/week-3/day-4-umap.ipynb`](notebooks/week-3/day-4-umap.ipynb) | Draws the digits and the client's accounts in two dimensions with UMAP, beside t-SNE and PCA, and places new rows on a picture already drawn. About 15 minutes. |
+| Week 3, Day 5 | [`notebooks/week-3/day-5-prophet.ipynb`](notebooks/week-3/day-5-prophet.ipynb) | Forecasts the client's weekly parcels with Prophet and with a seasonal ARIMA that is too slow for the browser, scores both on last year's peak beside the lesson's method, and shows how far reasonable methods disagree about November and December 2026. About 20 minutes. |
+| Week 3 | [`notebooks/week-3/model-card-template.ipynb`](notebooks/week-3/model-card-template.ipynb) | An empty frame for the week's deliverable: five headings and the cells that load the client's files. |
 
 ## Open it in Colab
 
 [Open Week 3 Day 2 in Colab](https://colab.research.google.com/github/talhaturab/fde-course-notebooks/blob/main/notebooks/week-3/day-2-catboost.ipynb)
 
 [Open Week 3 Day 4 in Colab](https://colab.research.google.com/github/talhaturab/fde-course-notebooks/blob/main/notebooks/week-3/day-4-umap.ipynb)
+
+[Open Week 3 Day 5 in Colab](https://colab.research.google.com/github/talhaturab/fde-course-notebooks/blob/main/notebooks/week-3/day-5-prophet.ipynb)
 
 Colab needs a Google account. Once it opens, press **Runtime → Run all**. The first cell installs the library the notebook needs, and the notebook reads its data from this repository, so there is nothing to upload.
 
@@ -32,7 +36,7 @@ pip install catboost==1.2.10 pandas scikit-learn jupyter
 jupyter notebook notebooks/week-3/day-2-catboost.ipynb
 ```
 
-For Week 3 Day 4, install `umap-learn==0.6.0 matplotlib` in place of CatBoost and open `notebooks/week-3/day-4-umap.ipynb`.
+For Week 3 Day 4, install `umap-learn==0.6.0 matplotlib` in place of CatBoost and open `notebooks/week-3/day-4-umap.ipynb`. For Week 3 Day 5, install `prophet==1.5.0 statsmodels matplotlib` and open `notebooks/week-3/day-5-prophet.ipynb`.
 
 Each notebook reads its data from GitHub by default. To use the copies in `data/` instead (for example, offline), set `DATA_DIR` before starting Jupyter:
 
@@ -44,4 +48,4 @@ The path is relative to the notebook's own folder.
 
 ## The data
 
-`data/shipments_history.csv` (21,511 delivered shipments, January 2024 to September 2026) and `data/customers_history.csv` (240 accounts) belong to the course's fictional logistics client. The client, its accounts, names and shipments are all made up for the course. No real company, person or shipment is described.
+`data/shipments_history.csv` (21,511 delivered shipments, January 2024 to September 2026), `data/shipments_history_october.csv` (994 parcels dispatched in October 2026, with no delivery times) and `data/customers_history.csv` (240 accounts) belong to the course's fictional logistics client. The client, its accounts, names and shipments are all made up for the course. No real company, person or shipment is described.

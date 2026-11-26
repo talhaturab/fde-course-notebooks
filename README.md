@@ -5,12 +5,15 @@ The Google Colab notebooks for the free course *Forward Deployed AI/ML Engineer*
 | Day | Notebook | What it does |
 | --- | --- | --- |
 | Week 3, Day 2 | [`notebooks/week-3/day-2-catboost.ipynb`](notebooks/week-3/day-2-catboost.ipynb) | Fits CatBoost on the logistics client's late deliveries, with category columns as plain text, and puts it on the day's scorecard. About 25 minutes. |
+| Week 3, Day 4 | [`notebooks/week-3/day-4-umap.ipynb`](notebooks/week-3/day-4-umap.ipynb) | Draws the digits and the client's accounts in two dimensions with UMAP, beside t-SNE and PCA, and places new rows on a picture already drawn. About 15 minutes. |
 
 ## Open it in Colab
 
 [Open Week 3 Day 2 in Colab](https://colab.research.google.com/github/talhaturab/fde-course-notebooks/blob/main/notebooks/week-3/day-2-catboost.ipynb)
 
-Colab needs a Google account. Once it opens, press **Runtime → Run all**. The first cell installs CatBoost, and the notebook reads its data from this repository, so there is nothing to upload.
+[Open Week 3 Day 4 in Colab](https://colab.research.google.com/github/talhaturab/fde-course-notebooks/blob/main/notebooks/week-3/day-4-umap.ipynb)
+
+Colab needs a Google account. Once it opens, press **Runtime → Run all**. The first cell installs the library the notebook needs, and the notebook reads its data from this repository, so there is nothing to upload.
 
 ## Read it without a Google account
 
@@ -29,7 +32,9 @@ pip install catboost==1.2.10 pandas scikit-learn jupyter
 jupyter notebook notebooks/week-3/day-2-catboost.ipynb
 ```
 
-The notebook reads its data from GitHub by default. To use the copies in `data/` instead (for example, offline), set `DATA_DIR` before starting Jupyter:
+For Week 3 Day 4, install `umap-learn==0.6.0 matplotlib` in place of CatBoost and open `notebooks/week-3/day-4-umap.ipynb`.
+
+Each notebook reads its data from GitHub by default. To use the copies in `data/` instead (for example, offline), set `DATA_DIR` before starting Jupyter:
 
 ```bash
 DATA_DIR=../../data jupyter notebook notebooks/week-3/day-2-catboost.ipynb
